@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+
+    "allowJs": true,
+
+    "esModuleInterop": true,
+
+    "target": "esnext"
+  },
+  "include": ["**/*", "**/.*", "**/.*/**/*", "**/.*/**/.*"],
+  "exclude": [
+    ".git/",
+    ".stryker/",
+    "build/",
+    "jsdocs/",
+    "node_modules/",
+    ".vscode/",
+    ".idea/"
+  ]
+}

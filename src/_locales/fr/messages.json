@@ -1,0 +1,8 @@
+{
+  "manifestDescription": {
+    "message": "Extraire un roadbook d'un itinéraire Google Maps."
+  },
+  "manifestPageActionTitle": {
+    "message": "Extraire un roadbook"
+  }
+}
