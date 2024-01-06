@@ -7,5 +7,10 @@
     stroke-width="2"
     stroke-linejoin="round"
   />
-  <path d="m 12.5,18.5 -8,0 V 10.5" fill="none" stroke="black" stroke-width="2" />
+  <path
+    d="m 12.5,18.5 -8,0 V 10.5"
+    fill="none"
+    stroke="black"
+    stroke-width="2"
+  />
 </svg>
