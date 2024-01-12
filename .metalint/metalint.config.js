@@ -9,6 +9,7 @@ export default {
         "**",
         // Ignorer les répertoires et les fichiers générés.
         "!/.git/**",
+        "!/.release-please/manifest.json",
         "!/.stryker/**",
         "!/CHANGELOG.md",
         "!/jsdocs/**",
