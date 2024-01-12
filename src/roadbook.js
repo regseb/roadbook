@@ -4,6 +4,12 @@
  * @author Sébastien Règne
  */
 
+/**
+ * Décale les distances.
+ *
+ * @param {Record<string, any>[]} steps Les étapes de l'itinéraire.
+ * @returns {Record<string, any>[]} Les étapes avec les distances décalées.
+ */
 const shiftDistance = (steps) => {
     return steps
         .reverse()
@@ -17,6 +23,12 @@ const shiftDistance = (steps) => {
         .reverse();
 };
 
+/**
+ * Convertir les distances en nombre.
+ *
+ * @param {Record<string, any>[]} steps Les étapes de l'itinéraire.
+ * @returns {Record<string, any>[]} Les étapes avec les distances en nombre.
+ */
 const parseDistance = (steps) => {
     return steps.map((step) => ({
         ...step,
@@ -27,6 +39,12 @@ const parseDistance = (steps) => {
     }));
 };
 
+/**
+ * Ajoute l'index de l'étape.
+ *
+ * @param {Record<string, any>[]} steps Les étapes de l'itinéraire.
+ * @returns {Record<string, any>[]} Les étapes avec leur index.
+ */
 const addIndex = (steps) => {
     return steps.map((step, index) => ({
         ...step,
@@ -34,6 +52,12 @@ const addIndex = (steps) => {
     }));
 };
 
+/**
+ * Ajoute les distances cumulées.
+ *
+ * @param {Record<string, any>[]} steps Les étapes de l'itinéraire.
+ * @returns {Record<string, any>[]} Les étapes avec les distances cumulées.
+ */
 const addTotal = (steps) => {
     const output = steps;
     output[0].total = 0;
@@ -43,6 +67,12 @@ const addTotal = (steps) => {
     return output;
 };
 
+/**
+ * Insert les images des directions.
+ *
+ * @param {Record<string, any>[]} steps Les étapes de l'itinéraire.
+ * @returns {Record<string, any>[]} Les étapes avec les images des directions.
+ */
 const insertImage = (steps) => {
     return steps.map((step) => ({
         ...step,
@@ -53,6 +83,12 @@ const insertImage = (steps) => {
     }));
 };
 
+/**
+ * Convertit les distances en kilomètre.
+ *
+ * @param {Record<string, any>[]} steps Les étapes de l'itinéraire.
+ * @returns {Record<string, any>[]} Les étapes avec les distances en kilomètre.
+ */
 const convertToKm = (steps) => {
     return steps.map((step) => ({
         ...step,
@@ -61,6 +97,12 @@ const convertToKm = (steps) => {
     }));
 };
 
+/**
+ * Ajoute les entêtes à la première position du tableau.
+ *
+ * @param {Record<string, any>[]} steps Les étapes de l'itinéraire.
+ * @returns {Record<string, any>[]} Les étapes avec les entêtes.
+ */
 const addHeaders = (steps) => {
     return [
         {
@@ -75,6 +117,12 @@ const addHeaders = (steps) => {
     ];
 };
 
+/**
+ * Génère le roadbook à partir des données brutes de Google Maps.
+ *
+ * @param {Record<string, any>[]} raw Les étapes brutes fournies par Goole Maps.
+ * @returns {Record<string, any>[]} Les étapes au bon format.
+ */
 export const writeRoadbook = (raw) => {
     let steps = [
         ...raw,

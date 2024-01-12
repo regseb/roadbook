@@ -4,6 +4,13 @@
  * @author Sébastien Règne
  */
 
+/**
+ * Convertit une image en base 64.
+ *
+ * @param {URL} url L'URL de l'image.
+ * @returns {Promise<string>} Une promesse avec les données de l'image en base
+ *                            64.
+ */
 const toBase64 = async (url) => {
     const response = await fetch(url);
     const blob = await response.blob();
@@ -18,6 +25,12 @@ const toBase64 = async (url) => {
     });
 };
 
+/**
+ * Crée une cellule du tableau.
+ *
+ * @param {any} cell Le contenu de la cellule.
+ * @returns {Promise<string[]>} Une promesse avec le code XML de la cellule.
+ */
 const createCell = async (cell) => {
     const parts = ["<table:table-cell>"];
 
@@ -39,6 +52,13 @@ const createCell = async (cell) => {
     return parts;
 };
 
+/**
+ * Crée un tableau pour LibreOffice.
+ *
+ * @param {any[][]} table Les contenus du tableau.
+ * @returns {Promise<Blob>} Une promesse avec le code XML du tableau dans un
+ *                          <code>Blob</code>.
+ */
 export const createODS = async (table) => {
     const parts = [
         `<?xml version="1.0" encoding="UTF-8"?>

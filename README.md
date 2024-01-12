@@ -15,7 +15,8 @@ Roadbook est une extension pour le navigateur Firefox. Elle extrait un roadbook
 d'un itinéraire sur Google Maps. Pour l'utiliser :
 
 - allez sur [Google Maps](https://www.google.com/maps) ;
-- planifier un itinéraire ;
+- planifiez un itinéraire ;
+- affichez les détails de l'itinéraire ;
 - cliquez sur l'icône de l'extension dans la barre de l'URL ;
 - un fichier pour [LibreOffice Calc](https://fr.libreoffice.org/discover/calc/)
   est téléchargé.
