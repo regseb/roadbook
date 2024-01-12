@@ -11,7 +11,7 @@
   "page_action": {
     "default_icon": "img/icon.svg",
     "default_title": "__MSG_manifestPageActionTitle__",
-    "show_matches": ["https://www.google.com/maps/dir/*"]
+    "show_matches": ["https://www.google.com/maps/dir/*/*/*/am=t/*"]
   },
   "default_locale": "fr",
   "description": "__MSG_manifestDescription__",
