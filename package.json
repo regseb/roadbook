@@ -1,6 +1,6 @@
 {
   "name": "roadbook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WebExtension pour extraire un roadbook d'un itinéraire Google Maps.",
   "keywords": [
     "roadbook",
