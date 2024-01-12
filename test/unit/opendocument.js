@@ -17,7 +17,7 @@ describe("opendocument.js", function () {
 
             const ods = await createODS(table);
 
-            assert.equal(ods.size, 1142);
+            assert.equal(ods.size, 1143);
             assert.equal(
                 ods.type,
                 "application/vnd.oasis.opendocument.spreadsheet",

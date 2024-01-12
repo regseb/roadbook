@@ -17,8 +17,9 @@ const toBase64 = async (url) => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.addEventListener("loadend", () => {
-            // Enlever le préfixe "data:image/png;base64,".
-            resolve(reader.result.slice(reader.result.indexOf(",") + 1));
+            const result = /** @type {string} */ (reader.result);
+            // Enlever le préfixe "data:image/*;base64,".
+            resolve(result.slice(result.indexOf(",") + 1));
         });
         reader.addEventListener("error", reject);
         reader.readAsDataURL(blob);
@@ -61,7 +62,7 @@ const createCell = async (cell) => {
  */
 export const createODS = async (table) => {
     const parts = [
-        `<?xml version="1.0" encoding="UTF-8"?>
+        `<?xml version="1.0" encoding="UTF-8" ?>
          <office:document
            xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"
            xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"

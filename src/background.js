@@ -9,7 +9,7 @@ import { writeRoadbook } from "./roadbook.js";
 
 browser.pageAction.onClicked.addListener(async (tab) => {
     const injectionResults = await browser.scripting.executeScript({
-        target: { tabId: tab.id },
+        target: { tabId: /** @type {number} */ (tab.id) },
         files: ["content-script.js"],
     });
     const steps = writeRoadbook(injectionResults[0].result);

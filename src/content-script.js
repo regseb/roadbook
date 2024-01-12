@@ -23,6 +23,6 @@
             ".directions-mode-distance-time",
         ).textContent;
         const observation = step.querySelector("h6")?.textContent;
-        return { dir, distance, comment, observation };
+        return { dir, comment, distance, observation };
     });
 }

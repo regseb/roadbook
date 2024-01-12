@@ -13,12 +13,10 @@
 const shiftDistance = (steps) => {
     return steps
         .reverse()
-        .map((step, index, steps2) => ({
+        .map((step, index, spets) => ({
             ...step,
             distance:
-                index + 1 === steps2.length
-                    ? "0 km"
-                    : steps2[index + 1].distance,
+                index + 1 === spets.length ? "0 km" : spets[index + 1].distance,
         }))
         .reverse();
 };
