@@ -7,11 +7,13 @@
   },
   "manifest_version": 2,
   "name": "Roadbook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "page_action": {
     "default_icon": "img/icon.svg",
     "default_title": "__MSG_manifestPageActionTitle__",
-    "show_matches": ["https://www.google.com/maps/dir/*/*/*/am=t/*"]
+    "show_matches": [
+      "https://www.google.com/maps/dir/*/*/*/am=t/*"
+    ]
   },
   "default_locale": "fr",
   "description": "__MSG_manifestDescription__",
@@ -21,9 +23,15 @@
   },
   "author": "Sébastien Règne",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "type": "module"
   },
   "homepage_url": "https://github.com/regseb/roadbook",
-  "permissions": ["activeTab", "downloads", "scripting"]
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting"
+  ]
 }
