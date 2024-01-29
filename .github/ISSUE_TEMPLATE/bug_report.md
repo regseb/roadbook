@@ -28,8 +28,8 @@ Steps to reproduce the behavior:
 
 ### Environment
 
-- Roadbook version<!-- e.g. 1.0.1 -->:
-- Firefox version<!-- e.g. 121.0 -->:
+- Roadbook version<!-- e.g. 1.0.2 -->:
+- Firefox version<!-- e.g. 122.0 -->:
 
 ### Additional context
 
