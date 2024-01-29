@@ -23,15 +23,9 @@
   },
   "author": "Sébastien Règne",
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "type": "module"
   },
   "homepage_url": "https://github.com/regseb/roadbook",
-  "permissions": [
-    "activeTab",
-    "downloads",
-    "scripting"
-  ]
+  "permissions": ["activeTab", "downloads", "scripting"]
 }
