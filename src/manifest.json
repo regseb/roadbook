@@ -7,7 +7,7 @@
   },
   "manifest_version": 2,
   "name": "Roadbook",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "page_action": {
     "default_icon": "img/icon.svg",
     "default_title": "__MSG_manifestPageActionTitle__",
@@ -209,9 +209,15 @@
   },
   "author": "Sébastien Règne",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "type": "module"
   },
   "homepage_url": "https://github.com/regseb/roadbook",
-  "permissions": ["activeTab", "downloads", "scripting"]
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting"
+  ]
 }
