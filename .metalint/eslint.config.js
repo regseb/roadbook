@@ -4,6 +4,13 @@
  * @author Sébastien Règne
  */
 
+/**
+ * @import { Linter } from "eslint"
+ */
+
+/**
+ * @type {Linter.Config}
+ */
 export default {
     plugins: [
         "array-func",
@@ -242,7 +249,6 @@ export default {
             "ForInStatement",
             "LabeledStatement",
             "SequenceExpression",
-            "TaggedTemplateExpression",
             "WithStatement",
             "YieldExpression",
             "JSXIdentifier",
@@ -404,13 +410,7 @@ export default {
         "import/no-relative-parent-imports": "off",
         "import/no-restricted-paths": "off",
         "import/no-self-import": "error",
-        "import/no-unresolved": [
-            "error",
-            {
-                caseSensitive: true,
-                caseSensitiveStrict: true,
-            },
-        ],
+        "import/no-unresolved": ["error", { caseSensitiveStrict: true }],
         "import/no-useless-path-segments": "error",
         "import/no-webpack-loader-syntax": "error",
 
@@ -470,7 +470,7 @@ export default {
             "error",
             "always",
             {
-                tags: ["param", "property"],
+                tags: ["param", "prop"],
                 customSpacings: {
                     postDelimiter: 1,
                     postTag: 1,
@@ -481,14 +481,18 @@ export default {
         "jsdoc/check-property-names": "error",
         "jsdoc/check-syntax": "error",
         "jsdoc/check-tag-names": "error",
+        "jsdoc/check-template-names": "error",
         "jsdoc/check-types": "error",
         "jsdoc/check-values": "error",
+        "jsdoc/convert-to-jsdoc-comments": "off",
         "jsdoc/empty-tags": "error",
         "jsdoc/implements-on-classes": "error",
         // Désactiver la règle, car elle ne supporte pas la propriété "exports".
         // https://github.com/gajus/eslint-plugin-jsdoc/issues/1114
         "jsdoc/imports-as-dependencies": "off",
         "jsdoc/informative-docs": "error",
+        // Désactiver cette règle et laisser Prettier gérer le formatage.
+        "jsdoc/lines-before-block": "off",
         "jsdoc/match-description": ["error", { matchDescription: "[A-ZÉ].*" }],
         "jsdoc/match-name": "off",
         "jsdoc/multiline-blocks": "error",
@@ -528,11 +532,13 @@ export default {
         "jsdoc/require-returns-check": "error",
         "jsdoc/require-returns-description": "error",
         "jsdoc/require-returns-type": "error",
+        "jsdoc/require-template": "error",
         "jsdoc/require-throws": "error",
         "jsdoc/require-yields": "error",
         "jsdoc/require-yields-check": "error",
         "jsdoc/sort-tags": "error",
         "jsdoc/tag-lines": ["error", "never", { startLines: 1 }],
+        "jsdoc/text-escaping": "off",
         "jsdoc/valid-types": "error",
 
         // Plugin eslint-plugin-no-unsanitized.
@@ -540,21 +546,22 @@ export default {
         "no-unsanitized/property": "error",
 
         // Plugin eslint-plugin-promise.
-        "promise/catch-or-return": "off",
-        "promise/no-return-wrap": "error",
-        "promise/param-names": "error",
         "promise/always-return": "off",
+        "promise/avoid-new": "off",
+        "promise/catch-or-return": "off",
+        "promise/no-callback-in-promise": "error",
+        "promise/no-multiple-resolved": "error",
         "promise/no-native": "off",
         "promise/no-nesting": "error",
-        "promise/no-promise-in-callback": "error",
-        "promise/no-callback-in-promise": "error",
-        "promise/avoid-new": "off",
         "promise/no-new-statics": "error",
+        "promise/no-promise-in-callback": "error",
         "promise/no-return-in-finally": "error",
-        "promise/valid-params": "error",
-        "promise/prefer-await-to-then": "error",
+        "promise/no-return-wrap": "error",
+        "promise/param-names": "error",
         "promise/prefer-await-to-callbacks": "off",
-        "promise/no-multiple-resolved": "error",
+        "promise/prefer-await-to-then": ["error", { strict: true }],
+        "promise/spec-only": "error",
+        "promise/valid-params": "error",
 
         // Plugin eslint-plugin-regexp.
         // Possible Errors.
@@ -648,11 +655,13 @@ export default {
         "regexp/sort-character-class-elements": "error",
         "regexp/sort-flags": "error",
         "regexp/unicode-escape": "error",
+        "regexp/unicode-property": "error",
 
         // Plugin eslint-plugin-unicorn.
         "unicorn/better-regex": "error",
         "unicorn/catch-error-name": ["error", { ignore: [/^err$/u, /^e$/u] }],
         "unicorn/consistent-destructuring": "error",
+        "unicorn/consistent-empty-array-spread": "error",
         "unicorn/consistent-function-scoping": "error",
         "unicorn/custom-error-definition": "error",
         // Laisser Prettier gérer cette règle.
@@ -665,30 +674,37 @@ export default {
         "unicorn/import-style": "error",
         "unicorn/new-for-builtins": "error",
         "unicorn/no-abusive-eslint-disable": "error",
+        "unicorn/no-anonymous-default-export": "error",
         "unicorn/no-array-callback-reference": "off",
         "unicorn/no-array-for-each": "off",
         "unicorn/no-array-method-this-argument": "error",
         "unicorn/no-array-push-push": "error",
         "unicorn/no-array-reduce": "off",
         "unicorn/no-await-expression-member": "error",
+        "unicorn/no-await-in-promise-methods": "error",
         "unicorn/no-console-spaces": "error",
         "unicorn/no-document-cookie": "error",
         "unicorn/no-empty-file": "error",
         "unicorn/no-for-loop": "error",
         "unicorn/no-hex-escape": "error",
         "unicorn/no-instanceof-array": "error",
+        "unicorn/no-invalid-fetch-options": "error",
         "unicorn/no-invalid-remove-event-listener": "error",
         "unicorn/no-keyword-prefix": "error",
+        "unicorn/no-length-as-slice-end": "error",
         "unicorn/no-lonely-if": "error",
+        "unicorn/no-magic-array-flat-depth": "error",
         // Utiliser la règle no-negated-condition d'ESLint, car celle d'unicorn
         // apporte seulement la correction automatique.
         "unicorn/no-negated-condition": "off",
+        "unicorn/no-negation-in-equality-check": "error",
         "unicorn/no-nested-ternary": "off",
         "unicorn/no-new-array": "error",
         "unicorn/no-new-buffer": "error",
         "unicorn/no-null": "error",
         "unicorn/no-object-as-default-parameter": "error",
         "unicorn/no-process-exit": "error",
+        "unicorn/no-single-promise-in-promise-methods": "error",
         "unicorn/no-static-only-class": "error",
         "unicorn/no-thenable": "error",
         "unicorn/no-this-assignment": "error",
@@ -712,7 +728,7 @@ export default {
         "unicorn/number-literal-case": "off",
         "unicorn/numeric-separators-style": "error",
         "unicorn/prefer-add-event-listener": "error",
-        "unicorn/prefer-array-find": ["error", { checkFromLast: true }],
+        "unicorn/prefer-array-find": "error",
         "unicorn/prefer-array-flat": "error",
         "unicorn/prefer-array-flat-map": "error",
         "unicorn/prefer-array-index-of": "error",
@@ -738,7 +754,8 @@ export default {
         "unicorn/prefer-module": "error",
         "unicorn/prefer-native-coercion-functions": "error",
         "unicorn/prefer-negative-index": "error",
-        "unicorn/prefer-node-protocol": "error",
+        // Désactiver cette règle et préférer la règle "n/prefer-node-protocol".
+        "unicorn/prefer-node-protocol": "off",
         "unicorn/prefer-number-properties": "error",
         "unicorn/prefer-object-from-entries": "error",
         "unicorn/prefer-optional-catch-binding": "error",
@@ -749,10 +766,12 @@ export default {
         "unicorn/prefer-set-has": "error",
         "unicorn/prefer-set-size": "error",
         "unicorn/prefer-spread": "off",
+        "unicorn/prefer-string-raw": "error",
         "unicorn/prefer-string-replace-all": "error",
         "unicorn/prefer-string-slice": "error",
         "unicorn/prefer-string-starts-ends-with": "error",
         "unicorn/prefer-string-trim-start-end": "error",
+        "unicorn/prefer-structured-clone": "error",
         "unicorn/prefer-switch": "off",
         "unicorn/prefer-ternary": "off",
         "unicorn/prefer-top-level-await": "error",
@@ -767,7 +786,17 @@ export default {
         "unicorn/require-post-message-target-origin": "off",
         "unicorn/string-content": "off",
         "unicorn/switch-case-braces": ["error", "avoid"],
-        "unicorn/template-indent": "error",
+        "unicorn/template-indent": [
+            "error",
+            // Configurer la règle pour qu'elle soit compatible avec Prettier.
+            // https://github.com/prettier/eslint-config-prettier#unicorntemplate-indent
+            {
+                tags: ["outdent", "dedent", "sql", "styled"],
+                functions: ["dedent", "stripIndent"],
+                selectors: [],
+                comments: ["indent"],
+            },
+        ],
         "unicorn/text-encoding-identifier-case": "error",
         "unicorn/throw-new-error": "error",
     },
@@ -796,7 +825,7 @@ export default {
                 var: "member",
                 arg: "param",
                 argument: "param",
-                prop: "property",
+                property: "prop",
                 return: "returns",
                 exception: "throws",
                 yield: "yields",

@@ -17,8 +17,8 @@ assignees: ""
 
 ### Environment
 
-- Roadbook version<!-- e.g. 1.0.2 -->:
-- Firefox version<!-- e.g. 122.0 -->:
+- Roadbook version<!-- e.g. 1.1.0 -->:
+- Firefox version<!-- e.g. 129.0 -->:
 
 ### Additional context
 

@@ -2,10 +2,10 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "roadbook@regseb.github.io",
-      "strict_min_version": "121.0"
+      "strict_min_version": "129.0"
     }
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Roadbook",
   "version": "1.0.2",
   "page_action": {

@@ -118,7 +118,8 @@ const addHeaders = (steps) => {
 /**
  * Génère le roadbook à partir des données brutes de Google Maps.
  *
- * @param {Record<string, any>[]} raw Les étapes brutes fournies par Goole Maps.
+ * @param {Record<string, any>[]} raw Les étapes brutes fournies par Google
+ *                                    Maps.
  * @returns {Record<string, any>[]} Les étapes au bon format.
  */
 export const writeRoadbook = (raw) => {
