@@ -2,15 +2,15 @@
 
 ## [1.1.0](https://github.com/regseb/roadbook/compare/v1.0.2...v1.1.0) (2024-08-08)
 
-
 ### Features
 
-* Gérer le ferry. ([d251fe5](https://github.com/regseb/roadbook/commit/d251fe5bc206ded3dad364739f8b4d7ead343b05))
-
+- Gérer le ferry.
+  ([d251fe5](https://github.com/regseb/roadbook/commit/d251fe5bc206ded3dad364739f8b4d7ead343b05))
 
 ### Bug Fixes
 
-* Corriger l'icône du rond-point. ([53c97a5](https://github.com/regseb/roadbook/commit/53c97a590d69e6983c0b10fdb9cfc79f8582f087))
+- Corriger l'icône du rond-point.
+  ([53c97a5](https://github.com/regseb/roadbook/commit/53c97a590d69e6983c0b10fdb9cfc79f8582f087))
 
 ## [1.0.2](https://github.com/regseb/roadbook/compare/v1.0.1...v1.0.2) (2024-01-29)
 
