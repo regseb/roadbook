@@ -7,7 +7,7 @@
   },
   "manifest_version": 3,
   "name": "Roadbook",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "page_action": {
     "default_icon": "img/icon.svg",
     "default_title": "__MSG_manifestPageActionTitle__",
