@@ -36,12 +36,12 @@
   "devDependencies": {
     "@prantlf/jsonlint": "14.0.3",
     "@prettier/plugin-xml": "3.4.1",
-    "@stryker-mutator/core": "8.4.0",
-    "@stryker-mutator/mocha-runner": "8.4.0",
+    "@stryker-mutator/core": "9.6.1",
+    "@stryker-mutator/mocha-runner": "9.6.1",
     "@types/eslint": "9.6.0",
     "@types/firefox-webext-browser": "120.0.4",
     "@types/mocha": "10.0.7",
-    "addons-linter": "6.33.0",
+    "addons-linter": "10.6.0",
     "eslint": "8.57.0",
     "eslint-plugin-array-func": "4.0.0",
     "eslint-plugin-eslint-comments": "3.2.0",
@@ -60,7 +60,7 @@
     "prettier": "3.3.3",
     "typedoc": "0.26.5",
     "typescript": "5.5.4",
-    "web-ext": "8.2.0",
+    "web-ext": "10.3.0",
     "yaml-lint": "1.7.0"
   },
   "engines": {
